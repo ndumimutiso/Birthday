@@ -13,7 +13,8 @@ function findAge() {
 	var month = date.getMonth();
 	var day = date.getDate();
 	var year = date.getFullYear();
-	var CC=Math.ceil(year/100);
+	var yy=year.toString();
+	var CC=yy.substring(0,2);
 	if(date === ""){
 		alert("Please complete the required field!");
 	}else if (month >12||month<1){
