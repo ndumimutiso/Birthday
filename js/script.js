@@ -80,6 +80,7 @@ function findAge() {
 				else
 					uname="Akosua";
 			}	
-		document.getElementById('result').innerHTML = "<center><h2>You were born on a "+dow+"</h2></center> <center><label>Your akan name is "+dow+" </label></center>";
+		document.getElementById('result').innerHTML = "<center><h2>You were born on a "+dow+"</h2></center> <center><label>Your akan name is "+uname+" </label></center>";
 	}
 }
+
