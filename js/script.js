@@ -1,5 +1,13 @@
 function findAge() {
 	var dt = document.getElementById('birthday').value;
+	var gender = document.getElementById('gender').value;
+	var uGender="male";
+	if (gender[0].checked) {
+	            uGender="male";
+	        } else if (radiosSmoking[1].checked) {
+	             uGender="male";
+	        }
+
 	var today = new Date();
 	var date = new Date(dt);
 	var month = date.getMonth();
@@ -32,6 +40,6 @@ function findAge() {
 																dow="Saturday";
 																else
 																	dow="Sunday";
-		document.getElementById('result').innerHTML = "<center><h2>Congratulation</h2></center> <center><label>You were born on a "+dow+" </label></center>";
+		document.getElementById('result').innerHTML = "<center><h2>Congratulation</h2></center> <center><label>You were born on a "+uGender+" </label></center>";
 	}
 }
