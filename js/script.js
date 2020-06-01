@@ -13,7 +13,25 @@ function findAge() {
 	}else if (day >31||day<1){
  							alert("Invalid Day!");
 	}else{
-			var dday= ( ( (CC/4) -2*CC-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day ) % 7;
-		document.getElementById('result').innerHTML = "<center><h2>Congratulation</h2></center> <center><label>You are now "+dday+"yrs old today</label></center>";
+			var dday= (((CC/4) - 2*CC-1) + ((5*year)/4) + ((26*(month+1)/10)) + day) % 7;
+			var d=Math.trunc(dday);
+			var dow="Tuesday";
+			if(d=="1")
+				dow="Mondday";
+				else 	if(d=="1")
+						dow="Monday";
+						else 	if(d=="2")
+								dow="Tuesday";
+								else 	if(d=="3")
+										dow="Wednesday";
+										else 	if(d=="4")
+												dow="Thursday";
+												else 	if(d=="5")
+														dow="Friday";
+														else 	if(d=="6")
+																dow="Saturday";
+																else
+																	dow="Sunday";
+		document.getElementById('result').innerHTML = "<center><h2>Congratulation</h2></center> <center><label>You were born on a "+dow+" </label></center>";
 	}
 }
