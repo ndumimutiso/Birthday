@@ -24,8 +24,15 @@ function findAge() {
 			var dday= (((CC/4) - 2*CC-1) + ((5*year)/4) + ((26*(month+1)/10)) + day) % 7;
 			var d=Math.trunc(dday);
 			var dow="Tuesday";
+			uname="";
 			if(d=="1")
-				dow="Mondday";
+				{
+					dow="Mondday";
+if(uGender="male")
+{
+	uname="";
+}
+			}
 				else 	if(d=="1")
 						dow="Monday";
 						else 	if(d=="2")
@@ -40,6 +47,6 @@ function findAge() {
 																dow="Saturday";
 																else
 																	dow="Sunday";
-		document.getElementById('result').innerHTML = "<center><h2>Congratulation</h2></center> <center><label>You were born on a "+uGender+" </label></center>";
+		document.getElementById('result').innerHTML = "<center><h2>You were born on a "+dow+"</h2></center> <center><label>Your akan name is "+dow+" </label></center>";
 	}
 }
