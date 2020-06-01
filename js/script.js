@@ -22,8 +22,13 @@ function findAge() {
 	}else if (day >31||day<1){
  							alert("Invalid Day!");
 	}else{
-			var dday= (((CC/4) - 2*CC-1) + ((5*year)/4) + ((26*(month+1)/10)) + day) % 7;
-			var d=Math.trunc(dday);var dow="";
+			
+var dday= ((((CC/4) - 2)*(CC-1)) + ((5*year)/4) + ((26*(month+1)/10)) + day) % 7;
+			var d=Math.trunc(dday);
+
+
+
+	var dow="";
 			uname="";
 			if(d=="1")
 			{
