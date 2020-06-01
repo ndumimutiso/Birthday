@@ -1,12 +1,12 @@
 function findAge() {
 	var dt = document.getElementById('birthday').value;
-	var gender = document.getElementById('gender').value;
+//	var gender = document.getElementsById('gender').value;
 	var uGender="male";
-	if (gender[0].checked) {
-	            uGender="male";
-	        } else if (radiosSmoking[1].checked) {
-	             uGender="male";
-	        }
+	if ( document.getElementsByName('male').checked) {
+      uGender="Male";
+  } else 	if ( document.getElementsByName('female').checked) {
+       uGender="Female";
+  }
 
 	var today = new Date();
 	var date = new Date(dt);
